@@ -1,0 +1,43 @@
+[gd_resource type="ArrayMesh" format=3 uid="uid://bx5ynd5om5s6r"]
+
+[ext_resource type="Texture2D" uid="uid://ckdoqepyxgrku" path="res://assets/GLB/Sala/lowpoly_modular_walls_4.png" id="1_xk41i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yyj0a"]
+resource_name = "mat_floor"
+cull_mode = 2
+albedo_color = Color(0.47397593, 0.47397593, 0.47397593, 1)
+albedo_texture = ExtResource("1_xk41i")
+roughness = 0.6
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qad11"]
+_surfaces = [{
+"aabb": AABB(-1.192093e-07, 0.10000001, -1, 1.0000002, 1e-05, 1.0000002),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "mat_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "Sketchfab_Scene_mesh_floor_1x1_mat_floor_0"
+_surfaces = [{
+"aabb": AABB(-1.192093e-07, 0.10000001, -1, 1.0000002, 1e-05, 1.0000002),
+"attribute_data": PackedByteArray(252, 127, 251, 255, 3, 0, 2, 128, 3, 0, 251, 255, 252, 127, 2, 128),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_yyj0a"),
+"name": "mat_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 254, 255, 0, 0, 255, 255, 255, 63, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qad11")

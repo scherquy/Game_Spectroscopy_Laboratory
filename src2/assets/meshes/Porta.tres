@@ -1,0 +1,42 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://d15d5tepxkxie"]
+
+[ext_resource type="Texture2D" uid="uid://eepw2ofwe2te" path="res://assets/GLB/Sala/lowpoly_modular_walls_1.png" id="1_rfv2l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pn3j"]
+resource_name = "mat_wall_inside_1"
+cull_mode = 2
+albedo_texture = ExtResource("1_rfv2l")
+roughness = 0.6
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dwtvg"]
+_surfaces = [{
+"aabb": AABB(-0.15000057, 0, 4.7683716e-07, 0.1499998, 2.0000002, 1),
+"format": 34896613377,
+"index_count": 96,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAAAEAAEABQAAAAMABAAAAAUAAwAGAAUAAQAEAAcABAAFAAcABwAIAAEACAAJAAEACgAIAAcACwAJAAoABQAGAAwACwAKAA0ABQAOAAcACgAHAA4ABQAMAA8ABQAPAA4ACgAOABAACgAQAA0AEAALAA0AEAAOAA8AEAARAAsAEgARABAAEAAPABMAEgAQABMADAATAA8AFAASABMADAAUABMAFAAVABIAAwAUAAwAAwAVABQA"),
+"name": "mat_wall_inside_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 22,
+"vertex_data": PackedByteArray("VVX/////AAD/////AAAAAP7//////wAA/v8AAP//AABVVf//AAAAAFVV1sP//wAAVVUAAP//AABVVdbDAAAAAFVVAAAAAAAA//8AAAAAAAAAAAAAAAAAAP7/AABmJgAAAAAAAP//AAAAAAAAZiYAAAAA1sMAAAAAAADWw///AAAAADKzZiYAAP7/MrNmJgAA/v8ys5jZAAAAADKzmNkAAAAAAACY2QAA/v8AAJjZAAA=")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "Sketchfab_Scene_mesh_wall_door_mat_wall_inside_1_0"
+_surfaces = [{
+"aabb": AABB(-0.15000057, 0, 4.7683716e-07, 0.1499998, 2.0000002, 1),
+"attribute_data": PackedByteArray("0WJu4Dlhe9A5YW7g0WJ70HvVqMS80/zUe9WA1rzTqMTxzUvb7NG01vHNtNbs0UvbitQT8uTQ4fSK1OH05NAT8vHNadTs0dLP8c3Sz+zRadTSyajEksv81JLLqMTSyYDWksv81HvVgNa80/zU0smA1mrpqM1g7jXYYO6ozWrpNdjs0bSx8c1pr/HNtLHs0Wmv5NAs+YrU4fTk0OH0itQs+YrUE/Lk0Mnt5NAT8orUye0x0+SuN9neqDHT3qg32eSuMdPlrjfZ67Q32eWuMdPrtDTv08wm7NPMJuwd0Cbs09o079PaT+pR263tUdut7drPre1VzE/qVcw="),
+"format": 34896613399,
+"index_count": 96,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANgA3ADQANwA4ADQAOQA6ADsAOwA8ADkAPAA9ADkA"),
+"material": SubResource("StandardMaterial3D_0pn3j"),
+"name": "mat_wall_inside_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 62,
+"vertex_data": PackedByteArray("VVX/////AAD/////AAAAAP7//////wAAVVX//wAAAAAAAAAA////PwAAMrOY2f8/AADWw////z8AAAAAmNn/PwAAAACY2QAA/v8ys5jZAAAAADKzmNkAAP7/AACY2QAAVVXWw////z8AANbDAAD/P1VV1sMAAP8/AADWw////z8AADKzZib+f/7/AABmJv5/AAAAAGYm/n/+/zKzZib+fwAAAAAAAP8/AAAys2Ym/z8AAAAAZib/PwAA1sMAAP8/AAAys2Ym/z8AANbD////PwAAMrOY2f8/AADWwwAA/z9VVf//AACqKlVV1sP//6oqVVXWwwAAqipVVf////+qKv7/MrOY2f8/AAAys2Ym/z8AADKzmNn/P/7/MrNmJv8/AAAAAAAAAABVVdbDAAAAAAAA1sMAAAAAVVUAAAAAAABVVdbD///+fwAAAAD///5/AADWw////n9VVQAA///+f/7/AAD//6oqAAAAAJjZqioAAAAA//+qKv7/AACY2aoq/v8AAGYmAAAAAAAAAAAAAAAAAABmJgAA//8AAAAAAAD/////AAAAAFVV//8AAAAAVVXWwwAAAABVVQAAAAAAAP//AAAAAAAA/v8AAP//AABVVQAA//8AAFVV1sP//wAAVVX/////AAD+//////8AAP9//7//f/+//3//v/9//7//f/7//3/+//9//v//f///////f////3////9/////f////3////9/////f////3//f////3////9/////f////3/+//9//v//f////3/+//9/////f////3////9///9UVaqqVFWqqlRVqqpUVaqqAAD/fwAA/38AAP9/AAD/f////3////9/////f////3//f////3////9/////f///VFVUVVRVVFVUVVRVVFVUVf9//z//f/8//3//P/9//z/+//9/////f/3/AYD+//9/////f/9//3//f/9//3//f/9//3//f/9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dwtvg")

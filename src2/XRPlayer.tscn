@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cfmdj3han6cta"]
+
+[node name="XROrigin3D" type="XROrigin3D" unique_id=273604206]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="." unique_id=2084685803]
+
+[node name="XRController3D" type="XRController3D" parent="." unique_id=1051657346]
+tracker = &"head"
+show_when_tracked = true

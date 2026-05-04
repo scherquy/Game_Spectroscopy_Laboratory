@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dd14mri16y7ks"]
+
+[ext_resource type="Script" uid="uid://be7tjgqjk6xk" path="res://script/listen_to_webcam.gd" id="1_uriqm"]
+[ext_resource type="Script" uid="uid://cstvo53p8jogr" path="res://script/camera_texture_to_texture_rect.gd" id="2_hba0e"]
+[ext_resource type="Script" uid="uid://t615i0hwsktr" path="res://addons/QRPlugin/QR.gd" id="3_fnyrk"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bfjr3"]
+
+[node name="Node3D" type="Node3D" unique_id=680310545]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=546310179]
+
+[node name="Control" type="Control" parent="." unique_id=681167880 node_paths=PackedStringArray("debug_label", "preview_rect")]
+layout_mode = 3
+anchor_right = 0.994
+anchor_bottom = 1.0
+offset_right = -0.16003418
+offset_bottom = -6.0
+script = ExtResource("1_uriqm")
+debug_label = NodePath("Label")
+preview_rect = NodePath("SubViewportContainer/SubViewport/VBoxContainer/TextureRect")
+look_for_webcams = Array[String](["USB Composite", "MiraBox"])
+look_for_format = Array[String](["1280x720"])
+
+[node name="Label" type="Label" parent="Control" unique_id=1760965346]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control" unique_id=1817565167]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer" unique_id=576509253]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Control/SubViewportContainer/SubViewport" unique_id=1408283919]
+transform = Transform3D(0.62169474, 0, -0.78325963, -0.4031624, 0.857356, -0.3200011, 0.67153233, 0.51472384, 0.5330137, 0, 0, 0)
+mesh = SubResource("BoxMesh_bfjr3")
+
+[node name="Camera3D" type="Camera3D" parent="Control/SubViewportContainer/SubViewport" unique_id=250083161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.31255746, 2.428678)
+current = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Control/SubViewportContainer/SubViewport/Camera3D" unique_id=1726935445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.56070876, 0.5036695, -0.3124814)
+light_energy = 5.119
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/SubViewportContainer/SubViewport" unique_id=1916531912]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+
+[node name="TextureRect" type="TextureRect" parent="Control/SubViewportContainer/SubViewport/VBoxContainer" unique_id=163965017 node_paths=PackedStringArray("to_affect")]
+layout_mode = 2
+expand_mode = 5
+script = ExtResource("2_hba0e")
+to_affect = NodePath(".")
+texture_width = 1280
+texture_height = 720
+
+[node name="TextureRect2" type="TextureRect" parent="Control/SubViewportContainer/SubViewport/VBoxContainer" unique_id=1251353035]
+visible = false
+layout_mode = 2
+expand_mode = 2
+
+[node name="Button" type="Button" parent="Control" unique_id=1638731087]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 795.0
+offset_right = 709.0
+offset_bottom = 1105.0
+text = "VAI"
+
+[node name="QR" type="Node" parent="." unique_id=551689445]
+script = ExtResource("3_fnyrk")
+metadata/_custom_type_script = "uid://t615i0hwsktr"

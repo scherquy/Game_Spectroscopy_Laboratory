@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://prt3ljbvfsgd"]
+
+[ext_resource type="Script" uid="uid://bp5qcbocd4p3h" path="res://node_2d.gd" id="1_wtcfe"]
+
+[sub_resource type="CameraTexture" id="CameraTexture_wtcfe"]
+which_feed = 1
+
+[node name="Node2D" type="Node2D" unique_id=919995667]
+script = ExtResource("1_wtcfe")
+
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=1670361631]
+custom_minimum_size = Vector2(1280, 720)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(258, 195)
+texture = SubResource("CameraTexture_wtcfe")

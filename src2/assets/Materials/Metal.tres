@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cthyter3cardy"]
+
+[resource]
+albedo_color = Color(0.86898494, 0.8689849, 0.8689849, 1)
+metallic = 1.0
+metallic_specular = 0.77
+roughness = 0.55

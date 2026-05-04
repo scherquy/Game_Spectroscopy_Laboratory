@@ -1,0 +1,14 @@
+.godot/
+!/.godot/extension_list.cfg
+.import/
+export.cfg
+export_presets.cfg
+.mono/
+data_*/
+mono_crash.*.json
+**/android/build/
+**/*.apk
+**/*.aab
+**/*.aar
+**/*.keystore
+**/*.so

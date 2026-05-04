@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://d7gan1gq55oc"]
+
+[ext_resource type="Script" uid="uid://c7idjtiu3qqkm" path="res://camera.gd" id="1_u5kg4"]
+[ext_resource type="Script" uid="uid://y746em125hns" path="res://addons/NativeCameraPlugin/NativeCamera.gd" id="2_diie0"]
+[ext_resource type="Script" uid="uid://br85aqgscagop" path="res://addons/QRPlugin/QR.gd" id="3_qqjab"]
+[ext_resource type="Shader" uid="uid://7lle8iqk5b3g" path="res://assets/shaders/camera.gdshader" id="4_eeger"]
+[ext_resource type="Texture2D" uid="uid://dwhp7ukx22sl3" path="res://icon.svg" id="4_p6dlx"]
+[ext_resource type="Texture2D" uid="uid://567n5sycxx87" path="res://assets/Figuras/Game_Boy.png" id="6_qq3f3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qq3f3"]
+shader = ExtResource("4_eeger")
+shader_parameter/glitch_chance = 1.0
+shader_parameter/glitch_speed = 7.23
+shader_parameter/slice_density = 14.545
+shader_parameter/slice_strength = 1.2349999999999999
+shader_parameter/shake_strength = 0.02
+shader_parameter/chroma_offset = 0.141
+shader_parameter/noise_strength = 3.785
+shader_parameter/color_flash_strength = 0.4
+shader_parameter/scanline_strength = 0.18
+shader_parameter/local_warp_strength = 0.14
+shader_parameter/flip_chance = 1.0
+
+[node name="Control" type="Control" unique_id=429364474 node_paths=PackedStringArray("tela")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_u5kg4")
+tela = NodePath("PanelContainer/TextureRect")
+
+[node name="NativeCamera" type="Node" parent="." unique_id=629259690]
+script = ExtResource("2_diie0")
+metadata/_custom_type_script = "uid://y746em125hns"
+
+[node name="QR" type="Node" parent="." unique_id=228308430]
+script = ExtResource("3_qqjab")
+metadata/_custom_type_script = "uid://br85aqgscagop"
+
+[node name="Label" type="Label" parent="." unique_id=1168435300]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=789997584]
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 320.0
+rotation = -1.5707964
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer" unique_id=1186748392]
+material = SubResource("ShaderMaterial_qq3f3")
+layout_mode = 2
+texture = ExtResource("4_p6dlx")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1442961674]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -219.0
+offset_right = 369.0
+texture = ExtResource("6_qq3f3")

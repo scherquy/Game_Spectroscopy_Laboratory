@@ -1,0 +1,557 @@
+[gd_scene format=4 uid="uid://crvi76ei1vork"]
+
+[ext_resource type="Texture2D" uid="uid://dds8bqc3gtro2" path="res://assets/GLB/Sala/lowpoly_modular_walls_0.png" id="1_3gss0"]
+[ext_resource type="ArrayMesh" uid="uid://r5un87wssl4g" path="res://assets/meshes/Corner.tres" id="2_co2wk"]
+[ext_resource type="Texture2D" uid="uid://dax3cih3x7a5r" path="res://assets/GLB/Sala/lowpoly_modular_walls_3.png" id="3_4lvyh"]
+[ext_resource type="ArrayMesh" uid="uid://doimdn35p08q1" path="res://assets/meshes/traight.tres" id="3_4pnud"]
+[ext_resource type="Texture2D" uid="uid://bo7pm3dcip5s2" path="res://assets/GLB/Sala/lowpoly_modular_walls_2.png" id="4_modhv"]
+[ext_resource type="ArrayMesh" uid="uid://bfoumvhqdyudk" path="res://assets/meshes/Janela.tres" id="4_o0tkw"]
+[ext_resource type="Texture2D" uid="uid://ckdoqepyxgrku" path="res://assets/GLB/Sala/lowpoly_modular_walls_4.png" id="5_86s5y"]
+[ext_resource type="ArrayMesh" uid="uid://dq3tnc5t752j1" path="res://assets/meshes/CornerOut.tres" id="6_bwle3"]
+[ext_resource type="ArrayMesh" uid="uid://d15d5tepxkxie" path="res://assets/meshes/Porta.tres" id="7_u0eqf"]
+[ext_resource type="ArrayMesh" uid="uid://bx5ynd5om5s6r" path="res://assets/meshes/Chao1x1.tres" id="9_3xxg1"]
+[ext_resource type="MeshLibrary" uid="uid://mxkhuwmcf7uu" path="res://assets/meshes/MeshLibrary/Library.meshlib" id="11_1l4ce"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5w7l0"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_o75ni"]
+sky_material = SubResource("ProceduralSkyMaterial_5w7l0")
+
+[sub_resource type="Environment" id="Environment_ai38r"]
+background_mode = 2
+sky = SubResource("Sky_o75ni")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7vmt"]
+resource_name = "mat_wall_side_b"
+cull_mode = 2
+albedo_texture = ExtResource("1_3gss0")
+roughness = 0.6
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_s64rl"]
+_surfaces = [{
+"aabb": AABB(-0.9999995, 0, 9.4174936e-07, 1, 2.0000002, 0.9999999),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABAAFAAIA"),
+"name": "mat_wall_side_b",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("//8AAP//AAD/////AAAAAP//AAAAAAAA////////AAAAAP//AAAAAAAAAAAAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0v3vn"]
+resource_name = "Sketchfab_Scene_mesh_wall_corner_mat_wall_side_b_0"
+_surfaces = [{
+"aabb": AABB(-0.9999995, 0, 9.4174936e-07, 1, 2.0000002, 0.9999999),
+"attribute_data": PackedByteArray("AgAGAP1//P/9fwYAAgD8//7/+v8EgAQABID6////BAA="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_s7vmt"),
+"name": "mat_wall_side_b",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("//8AAP///z//////AAD/P///AAAAAP8//////////z8AAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAAAAP9/AAD/fwAA/38AAP9/AAD/f////3/+//9/////f/7/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_s64rl")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pdcnv"]
+_surfaces = [{
+"aabb": AABB(2.0843214e-14, 0, -2.3841858e-07, 1e-05, 2.0000002, 1),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "mat_wall_side_b",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("eQQAAAAAAAAAAP////8AAHkE//8AAAAAAAAAAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gc1x4"]
+resource_name = "Sketchfab_Scene_mesh_wall_straight_mat_wall_side_b_0"
+_surfaces = [{
+"aabb": AABB(2.0843214e-14, 0, -2.3841858e-07, 1e-05, 2.0000002, 1),
+"attribute_data": PackedByteArray("/38EAAQA+v//f/r/BAAEAA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_s7vmt"),
+"name": "mat_wall_side_b",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("eQQAAAAA/z8AAP//////P3kE//8AAP8/AAAAAP///z//fwAA/38AAP9/AAD/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_pdcnv")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yy1e4"]
+_surfaces = [{
+"aabb": AABB(4.168643e-14, 0, -4.7683716e-07, 1e-05, 2.0000002, 1.0000002),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAAAEAAEABQAAAAMABgABAAQAAwAGAAUABgAEAAcABwAFAAYA"),
+"name": "mat_wall_side_b",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD/////AACJA2XGwjUAAPAAZcY8ygAA8ABReDzKAAB5BP//AAAAAAAAAAD//wAAiQNReMI1AAB5BAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ogsa3"]
+resource_name = "Sketchfab_Scene_mesh_wall_window_mat_wall_side_b_0"
+_surfaces = [{
+"aabb": AABB(4.168643e-14, 0, -4.7683716e-07, 1e-05, 2.0000002, 1.0000002),
+"attribute_data": PackedByteArray("AgD8/xxlZcbiGmXG/X/8//1/BgACAAYAHGVUeP1//P8cZWXG4hpUeAIA/P/iGmXG"),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABgAHAAQABgAIAAcACQAGAAUABQAKAAkACgALAAkA"),
+"material": SubResource("StandardMaterial3D_s7vmt"),
+"name": "mat_wall_side_b",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAD//////z+JA2XGwjX/P/AAZcY8yv8/eQT//wAA/z95BAAAAAD/PwAAAAD///8/iQNReMI1/z95BP//AAD/P4kDZcbCNf8/8ABReDzK/z8AAP//////P/AAZcY8yv8//38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_yy1e4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f82y0"]
+resource_name = "mat_window"
+cull_mode = 2
+albedo_texture = ExtResource("3_4lvyh")
+roughness = 0.6
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2o514"]
+_surfaces = [{
+"aabb": AABB(-5.07052e-08, 0, 0, 0.054436244, 0.61, 0.28999996),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAwAAAAIAAAAEAAEAAwAFAAAAAAAGAAQAAAAFAAYABQADAAcAAQAHAAMABQAHAAYABAAHAAEABAAGAAcA"),
+"name": "mat_window",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/v//////AAD//wAAAAAAAP7/AAD//wAAAAAAAP//AAD/////AAAAAAAA/////wAAAAD//wAAAAAAAAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vfcec"]
+resource_name = "Sketchfab_Scene_mesh_window_sash_1_mat_window_0"
+_surfaces = [{
+"aabb": AABB(-5.07052e-08, 0, 0, 0.054436244, 0.61, 0.28999996),
+"attribute_data": PackedByteArray("X+X/f/9///9f5f///3//f/9//39f5f//X+X/f/9///8A66zZI+N18gDrdfIj46zZr+z+////AICv7ACA///+/9Llp/Wv7d7c0uXe3K/tp/VK8ED/tuBCf7bgQP9J8EJ/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_f82y0"),
+"name": "mat_window",
+"primitive": 3,
+"uv_scale": Vector4(1.1830556, 2, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/v//////AAD//wAAAAAAAP7/AAD//wAA/////wAAAAAAAP////8AAAAAAAAAAAAAAAD//wAAAAAAAAAA//8AAP7///////8/AAD//wAA/z//////AAD/PwAA//////8//////wAAAAAAAAAAAAAAAP//AAAAAAAAAAD//wAAAAD//wAAAAAAAAAAAAD//wAA/v8AAP//AAAAAAAAAAAAAAAAAAD//wAA/v//////AAD+/wAA//8AAAAA/////wAA/7//f/+//3//v/9//7//f////7////+/////v////7////9/////f////3////9//3////9//v//f/7//3////9//z//f/8//3//P/9//z//f/9//3//f/9//3//f/9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_2o514")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kf8mo"]
+_surfaces = [{
+"aabb": AABB(-0.054436192, -2.53526e-08, -0.29000002, 0.05443627, 0.61, 0.29000002),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAwAAAAIAAAAEAAEAAwAFAAAAAAAGAAQAAAAFAAYABQADAAcAAQAHAAMABQAHAAYABAAHAAEABAAGAAcA"),
+"name": "mat_window",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//wAAAAAAAAAA//8AAAAAAAAAAAAA/v8AAAAAAAAAAP///v8AAP////8AAAAA/v////7/AAD+/wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8egcw"]
+resource_name = "Sketchfab_Scene_mesh_window_sash_2_mat_window_0"
+_surfaces = [{
+"aabb": AABB(-0.054436192, -2.53526e-08, -0.29000002, 0.05443627, 0.61, 0.29000002),
+"attribute_data": PackedByteArray("X+X/f/9///9f5f///3//f/9//39f5f//X+X/f/9///8A66zZI+N18gDrdfIj46zZr+z+////AICv7ACA///+/9Llp/Wv7d7c0uXe3K/tp/VK8ED/tuBCf7bgQP9J8EJ/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_f82y0"),
+"name": "mat_window",
+"primitive": 3,
+"uv_scale": Vector4(1.1830556, 2, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD//wAAAAAAAAAA//8AAAAAAAAAAAAAAAD///7/AAD/////AAAAAP7/AAD//wAA/v////7/AAD+/wAAAAAAAAAA//8AAAAA/v////7/AAAAAP///v8AAP////8AAAAAAAD///7//n/+/wAA///+fwAAAAD///5//v////7//n8AAAAA////P/7/AAAAAP8/AAAAAAAA/z/+/wAA////P/7/AAAAAAAAAAD//wAAAAAAAAAAAAAAAP////8AAAAA////P////z////8/////P/+//3//v/9//7//f/+//3//f/+//3//v/9//7//f/+//3////9/////f////3///wAA/38AAP9/AAD/fwAA/3////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_kf8mo")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_irp4g"]
+_surfaces = [{
+"aabb": AABB(-1.2675911e-06, 0, -1.0000008, 1.0000004, 2.0000002, 1.0000004),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQA"),
+"name": "mat_wall_side_b",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAP////8AAAAA//8AAAAAAAAAAP//AAD//////v8AAP//AAD+/wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ridd3"]
+resource_name = "Sketchfab_Scene_mesh_wall_corner_outside_mat_wall_side_b_0"
+_surfaces = [{
+"aabb": AABB(-1.2675911e-06, 0, -1.0000008, 1.0000004, 2.0000002, 1.0000004),
+"attribute_data": PackedByteArray("+P8GAP9/+P/4//j//38GAP9/BgAGAPj//3/4/wYABgA="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_s7vmt"),
+"name": "mat_wall_side_b",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAAAA/z8AAP//////PwAA//8AAP8/AAAAAP///z8AAAAA//8AAP/////+/wAAAAD/////AAD//wAA/v8AAP9/AAD/fwAA/38AAP9/AAD/f/7//3/+//9/////f/7/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_irp4g")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ewcu8"]
+_surfaces = [{
+"aabb": AABB(-9.536744e-07, 0, 4.7683716e-07, 1e-05, 2.0000002, 1),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAwAEAAAABQAAAAQABgAFAAQABAAHAAYA"),
+"name": "mat_wall_side_b",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("eQT//wAAAAB5BAAAAAAAAM0DAABmJgAAzQMys2YmAACrADKzmNkAAAAA/////wAAAAAAAP//AACrAAAAmNkAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2kcnx"]
+resource_name = "Sketchfab_Scene_mesh_wall_door_mat_wall_side_b_0"
+_surfaces = [{
+"aabb": AABB(-9.536744e-07, 0, 4.7683716e-07, 1e-05, 2.0000002, 1),
+"attribute_data": PackedByteArray("/3/6//9/BADNbAQAzWwwszcTMLMEAPr/BAAEADcTBAA="),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAwAEAAAABQAAAAQABgAFAAQABAAHAAYA"),
+"material": SubResource("StandardMaterial3D_s7vmt"),
+"name": "mat_wall_side_b",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("eQT//wAA/z95BAAAAAD/P80DAABmJv8/zQMys2Ym/z+rADKzmNn/PwAA//////8/AAAAAP///z+rAAAAmNn/P/9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ewcu8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6krkj"]
+resource_name = "mat_door"
+cull_mode = 2
+albedo_texture = ExtResource("4_modhv")
+roughness = 0.6
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lemnh"]
+_surfaces = [{
+"aabb": AABB(-0.0041818637, 0, -0.69000024, 0.069999814, 1.4000001, 0.7000001),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAgADAAUAAgAFAAAAAAAGAAQAAAAFAAYABAAHAAEAAQAHAAMABAAGAAcABQADAAcABQAHAAYA"),
+"name": "mat_door",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//wAAAAAAAAAAVvwAAAAAAAAAAAAA//8AAAAAAAAAAP///v8AAP////8AAAAA/v//////AAD+/wAAVvwAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vdld1"]
+resource_name = "Sketchfab_Scene_mesh_door_mat_door_0"
+_surfaces = [{
+"aabb": AABB(-0.0041818637, 0, -0.69000024, 0.069999814, 1.4000001, 0.7000001),
+"attribute_data": PackedByteArray("/3///zLb/3//f/9/Mtv8//9///8y2/9/Mtv8//9//3/n6P9/Pd2K/+foiv893f9/YvMAgObp/v9i8/7/5ukAgKvyiv/+//9/q/L/f///iv/t6W3/QvNvf+3pb39C823/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_6krkj"),
+"name": "mat_door",
+"primitive": 3,
+"uv_scale": Vector4(1.4877143, 2, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD//wAA/z8AAAAAVvz/PwAAAAAAAP8/AAD///7//z//////AAD///7/AABW/P///v///////////wAAAAD//wAAAAAAAAAA/////wAAAAAAAP//AAAAAP//AAAAAAAAAAD//wAAAAD+//////8AAAAA///+/wAA/////wAAAAAAAP///v+0f/7/AABW/LR/AAAAAFb8tH/+//////+0fwAAAABW/P8///8AAAAA/z8AAAAAAAD/P/7/AABW/P8/AoD9/wCA/v//f///BID8/wAA/78AAP+/AAD/v/+//3//f////3////9/////f////3//v/9//7//f/+//3//vwAAAIAAAACAAAAAgAAAAIAAAP9/AAD/fwAA/38AAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lemnh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yyj0a"]
+resource_name = "mat_floor"
+cull_mode = 2
+albedo_color = Color(0.47397593, 0.47397593, 0.47397593, 1)
+albedo_texture = ExtResource("5_86s5y")
+roughness = 0.6
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fipud"]
+_surfaces = [{
+"aabb": AABB(-2.384186e-07, 0.10000001, -2, 2.0000005, 1e-05, 2.0000005),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "mat_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAA/v8AAAAAAAAAAAAA/v8AAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_eskma"]
+resource_name = "Sketchfab_Scene_mesh_floor_2x2_mat_floor_0"
+_surfaces = [{
+"aabb": AABB(-2.384186e-07, 0.10000001, -2, 2.0000005, 1e-05, 2.0000005),
+"attribute_data": PackedByteArray("BgAGAPj/+P/4/wYABgD4/w=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_yyj0a"),
+"name": "mat_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAA/v8AAAAAAAAAAAAA/v8AAP//AAD/f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_fipud")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7ind3"]
+_surfaces = [{
+"aabb": AABB(-1.1920933e-07, 0.10000001, -2, 1.0000004, 1e-05, 2.0000005),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "mat_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAA/v8AAAAAAAAAAAAA/v8AAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_m1cba"]
+resource_name = "Sketchfab_Scene_mesh_floor_1x2_mat_floor_0"
+_surfaces = [{
+"aabb": AABB(-1.1920933e-07, 0.10000001, -2, 1.0000004, 1e-05, 2.0000005),
+"attribute_data": PackedByteArray("AwAGAPx/+P/8fwYAAwD4/w=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_yyj0a"),
+"name": "mat_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAA/v8AAAAAAAAAAAAA/v8AAP//AAD/f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7ind3")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jbx1d"]
+_surfaces = [{
+"aabb": AABB(-2.384186e-07, 0.10000001, -1, 2.0000002, 1e-05, 1.0000005),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "mat_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAA/v8AAAAAAAAAAAAA/v8AAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6lln6"]
+resource_name = "Sketchfab_Scene_mesh_floor_2x1_mat_floor_0"
+_surfaces = [{
+"aabb": AABB(-2.384186e-07, 0.10000001, -1, 2.0000002, 1e-05, 1.0000005),
+"attribute_data": PackedByteArray("BgADAPj//H/4/wMABgD8fw=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_yyj0a"),
+"name": "mat_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAA/v8AAAAAAAAAAAAA/v8AAP//AAD/f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jbx1d")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fgvub"]
+albedo_texture = ExtResource("1_3gss0")
+uv1_scale = Vector3(3.225, 1, 1)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0x6q3"]
+material = SubResource("StandardMaterial3D_fgvub")
+size = Vector2(8, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1bll6"]
+size = Vector3(0.12, 2, 0.89746094)
+
+[node name="Sala" type="Node3D" unique_id=403090262]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=298287660]
+environment = SubResource("Environment_ai38r")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1674462876]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Sketchfab_model" type="Node3D" parent="." unique_id=1365932582]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="modular_walls_fbx" type="Node3D" parent="Sketchfab_model" unique_id=1568496176]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+
+[node name="RootNode" type="Node3D" parent="Sketchfab_model/modular_walls_fbx" unique_id=2041368184]
+
+[node name="QuinaDentro" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode" unique_id=1881691493]
+transform = Transform3D(7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 0, 0, 0)
+
+[node name="mesh_wall_corner_mat_wall_side_b_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/QuinaDentro" unique_id=1018238427]
+mesh = SubResource("ArrayMesh_0v3vn")
+
+[node name="mesh_wall_corner_mat_wall_inside_1_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/QuinaDentro" unique_id=500352303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7434152, -3.8711595e-16, -1.3162419e-07)
+mesh = ExtResource("2_co2wk")
+
+[node name="Reto" type="Node3D" parent="Sketchfab_model/modular_walls_fbx/RootNode" unique_id=1298324536]
+
+[node name="mesh_wall_straight_mat_wall_side_b_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/Reto" unique_id=146786715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0300724e-15, -4.639034)
+mesh = SubResource("ArrayMesh_gc1x4")
+
+[node name="mesh_wall_straight_mat_wall_inside_1_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/Reto" unique_id=1172963727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3298379e-15, -5.9890575)
+mesh = ExtResource("3_4pnud")
+
+[node name="Reto_com_janela" type="Node3D" parent="Sketchfab_model/modular_walls_fbx/RootNode" unique_id=2053835372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1320224, 0, 0)
+
+[node name="mesh_wall_window_mat_wall_side_b_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/Reto_com_janela" unique_id=1056014028]
+mesh = SubResource("ArrayMesh_ogsa3")
+
+[node name="mesh_wall_window_mat_wall_inside_1_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/Reto_com_janela" unique_id=1173607386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.2380815e-16, -1.4583023)
+mesh = ExtResource("4_o0tkw")
+
+[node name="mesh_window_sash_1" type="Node3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/Reto_com_janela" unique_id=38484339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0922184, 0.94000006, 0.21000004)
+
+[node name="mesh_window_sash_1_mat_window_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/Reto_com_janela/mesh_window_sash_1" unique_id=231428513]
+mesh = SubResource("ArrayMesh_vfcec")
+
+[node name="mesh_window_sash_2" type="Node3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/Reto_com_janela" unique_id=264623993]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.037822723, 0.94000006, 0.7898092)
+
+[node name="mesh_window_sash_2_mat_window_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/Reto_com_janela/mesh_window_sash_2" unique_id=2095789920]
+mesh = SubResource("ArrayMesh_8egcw")
+
+[node name="QuinaFora" type="Node3D" parent="Sketchfab_model/modular_walls_fbx/RootNode" unique_id=1332638945]
+transform = Transform3D(7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 1.0525055, 0, 0)
+
+[node name="mesh_wall_corner_outside_mat_wall_side_b_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/QuinaFora" unique_id=757215753]
+mesh = SubResource("ArrayMesh_ridd3")
+
+[node name="mesh_wall_corner_outside_mat_wall_inside_1_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/QuinaFora" unique_id=658523520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9680091, 2.1494128e-16, 5.34526)
+mesh = ExtResource("6_bwle3")
+
+[node name="Porta" type="Node3D" parent="Sketchfab_model/modular_walls_fbx/RootNode" unique_id=1590327449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8617935, 0, 0)
+
+[node name="mesh_wall_door_mat_wall_side_b_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/Porta" unique_id=1983595055]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.7528915e-16, -1.2397921)
+mesh = SubResource("ArrayMesh_2kcnx")
+
+[node name="mesh_wall_door_mat_wall_inside_1_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/Porta" unique_id=1911310286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7148952e-16, 1.2226801)
+mesh = ExtResource("7_u0eqf")
+
+[node name="mesh_door" type="Node3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/Porta" unique_id=1851399662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.105818786, 0, 0.84000015)
+
+[node name="mesh_door_mat_door_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/Porta/mesh_door" unique_id=906741323]
+mesh = SubResource("ArrayMesh_vdld1")
+
+[node name="Chao1x1" type="Node3D" parent="Sketchfab_model/modular_walls_fbx/RootNode" unique_id=595185683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.10000002, 4)
+
+[node name="mesh_floor_1x1_mat_floor_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/Chao1x1" unique_id=214674124]
+mesh = ExtResource("9_3xxg1")
+
+[node name="Chao2x2" type="Node3D" parent="Sketchfab_model/modular_walls_fbx/RootNode" unique_id=818546911]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.10000002, 5)
+
+[node name="mesh_floor_2x2_mat_floor_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/Chao2x2" unique_id=63275923]
+mesh = SubResource("ArrayMesh_eskma")
+
+[node name="chao1x2" type="Node3D" parent="Sketchfab_model/modular_walls_fbx/RootNode" unique_id=1655894316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.099999994, 5)
+
+[node name="mesh_floor_1x2_mat_floor_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/chao1x2" unique_id=1880852167]
+mesh = SubResource("ArrayMesh_m1cba")
+
+[node name="chao2x1" type="Node3D" parent="Sketchfab_model/modular_walls_fbx/RootNode" unique_id=879403198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.099999994, 4)
+
+[node name="mesh_floor_2x1_mat_floor_0" type="MeshInstance3D" parent="Sketchfab_model/modular_walls_fbx/RootNode/chao2x1" unique_id=596943582]
+mesh = SubResource("ArrayMesh_6lln6")
+
+[node name="Parede1" type="MeshInstance3D" parent="." unique_id=1267312362]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -5.740596, 0.9919522, 0)
+mesh = SubResource("PlaneMesh_0x6q3")
+
+[node name="Walls" type="GridMap" parent="." unique_id=553858806]
+mesh_library = ExtResource("11_1l4ce")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(65532, 65533, 655360, 65532, 65531, 655364, 65530, 65531, 655360, 65530, 65529, 655362, 65530, 65528, 655361, 65530, 65527, 655361)
+}
+
+[node name="Camera3D" type="Camera3D" parent="Walls" unique_id=1081154257]
+transform = Transform3D(0.6416371, 0, 0.76700836, 0, 1, 0, -0.76700836, 0, 0.6416371, -2.353116, 1.1882935, -12.358439)
+
+[node name="Corner" type="MeshInstance3D" parent="." unique_id=1052707043]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61577165, 0, -8.850766)
+mesh = ExtResource("2_co2wk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Corner" unique_id=1605014439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.49999952, 1.0000001, 0.5000009)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corner/StaticBody3D" unique_id=2011739245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45518303, 0, 0.04856968)
+shape = SubResource("BoxShape3D_1bll6")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Corner/StaticBody3D" unique_id=1683858016]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.050825, -0.004868746, -0.45836163)
+shape = SubResource("BoxShape3D_1bll6")

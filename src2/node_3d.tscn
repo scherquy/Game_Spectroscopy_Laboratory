@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://d2uyqnkayib1u"]
+
+[node name="Node3D" type="Node3D" unique_id=44760565]
+
+[node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=575170932]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=47022555]
