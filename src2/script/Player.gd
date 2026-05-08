@@ -12,8 +12,9 @@ var passo_lateral = Vector3(0,0,0)
 @export var olho:RayCast3D
 
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
+	#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	pass
+	
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -37,7 +38,13 @@ func _physics_process(delta: float) -> void:
 		if olho.get_collider() is GameObject:
 			hud.mostre_esse_objeto(olho.get_collider())
 			if Input.is_action_just_pressed("acao"):
-				hud.executar_acao(olho.get_collider())
+				if olho.get_collider().pegavel:
+					hud.pegar_esse_objeto(olho.get_collider())
+				else:
+					hud.executar_acao(olho.get_collider())
+		elif olho.get_collider().has_method("interagir"):
+			if Input.is_action_just_pressed("acao"):
+				olho.get_collider().interagir(self)
 		else:
 			hud.nao_vejo_nada()
 	else:
@@ -49,3 +56,14 @@ func _input(event:InputEvent):
 		rotation_degrees.y -= event.relative.x * mouse_sensitivity
 		if camera.rotation_degrees.x > -65 && event.relative.y>0 || camera.rotation_degrees.x < 45 && event.relative.y<0:
 			camera.rotation_degrees.x -= event.relative.y * mouse_sensitivity
+
+func descartar_item_da_mao() -> bool:
+	if hud == null:
+		print("Hud nao encontrado")
+		return false
+	
+	if hud.has_method("descartar_item_da_mao"):
+		return hud.descartar_item_da_mao()
+	
+	print("O hud ainda nao possui a funcao descartar_item_da_mao()")
+	return false

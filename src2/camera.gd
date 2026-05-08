@@ -81,14 +81,14 @@ func _detectou_qr(dados: String) -> void:
 	
 	#tira espacos e deixa tudo minusculo no qr code
 	var codigo = dados.strip_edges().to_lower()
-	
+	emit_signal("scan_feito_com_sucesso",codigo)
 	#verifica se eh um qr code valido ou nao
-	match codigo:
-		"sucesso":
-			_atualizar_label("Você escaneou o SUCESSO", "valido")
-			emit_signal("scan_feito_com_sucesso",codigo)
-		_:
-			_atualizar_label("QR Code Valido, mas é "+codigo, "invalido")
+#	match codigo:
+#		"sucesso":
+#			_atualizar_label("Você escaneou o SUCESSO", "valido")
+#			emit_signal("scan_feito_com_sucesso",codigo)
+#		_:
+#			_atualizar_label("QR Code Valido, mas é "+codigo, "invalido")
 
 # executa quando nenhum qr code esta na tela
 func _scan_falhou(_erro) -> void:

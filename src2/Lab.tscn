@@ -12,6 +12,9 @@
 [ext_resource type="Script" uid="uid://bp1x1eaufbvvv" path="res://script/ContainerMagico.gd" id="7_xdlid"]
 [ext_resource type="PackedScene" uid="uid://ddat2kalictkp" path="res://assets/GLB/Furniture/Counters/counter_counter_sink.glb" id="8_8nykp"]
 [ext_resource type="Material" uid="uid://cthyter3cardy" path="res://assets/Materials/Metal.tres" id="9_m2r6f"]
+[ext_resource type="Script" uid="uid://6i0ev8a7vyoo" path="res://lixeira.gd" id="12_83n83"]
+[ext_resource type="PackedScene" uid="uid://ckgi1g5pch7u0" path="res://assets/Ceretta.glb" id="13_lw4vb"]
+[ext_resource type="PackedScene" uid="uid://cu3fo7ekve1nf" path="res://assets/GLB/Lixeira/trash_can.glb" id="13_s58qb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f0mgn"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -29,19 +32,6 @@ glow_enabled = true
 radius = 0.225
 height = 1.2353516
 
-[sub_resource type="BoxMesh" id="BoxMesh_xdlid"]
-size = Vector3(0.355, 0.595, 0.06)
-
-[sub_resource type="QuadMesh" id="QuadMesh_lw4vb"]
-size = Vector2(0.325, 0.215)
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_83n83"]
-viewport_path = NodePath("CharacterBody3D/HUD/TextureRect/SubViewportContainer/SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s58qb"]
-resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_83n83")
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jud04"]
 content_margin_left = 16.0
 content_margin_top = 16.0
@@ -52,6 +42,16 @@ border_width_left = 8
 border_width_top = 8
 border_width_right = 8
 border_width_bottom = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lw4vb"]
+content_margin_left = 24.0
+content_margin_top = 24.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tnmqq"]
 resource_name = "Solid - 25%"
@@ -266,6 +266,46 @@ point_count = 3
 [sub_resource type="BoxShape3D" id="BoxShape3D_sgjni"]
 size = Vector3(0.9303349, 1.170568, 1.1398759)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_83n83"]
+
+[sub_resource type="Animation" id="Animation_lw4vb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blockbench_export:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2.1668537, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_83n83"]
+resource_name = "floating"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blockbench_export:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 2.1668537, 0), Vector3(0, 1.7164671, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s58qb"]
+_data = {
+&"RESET": SubResource("Animation_lw4vb"),
+&"floating": SubResource("Animation_83n83")
+}
+
 [node name="Node3D" type="Node3D" unique_id=1022334396]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1961464926]
@@ -307,7 +347,7 @@ hud = NodePath("HUD")
 olho = NodePath("Camera3D/Olho")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1535686856]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7181797, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6837826, 0)
 shape = SubResource("CapsuleShape3D_sgjni")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=2135310122]
@@ -316,16 +356,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 2
 [node name="Olho" type="RayCast3D" parent="CharacterBody3D/Camera3D" unique_id=214874776]
 target_position = Vector3(0, 0, -1.5)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/Camera3D" unique_id=520580988]
-transform = Transform3D(1, -9.496624e-09, -1.044075e-09, 9.496624e-09, 0.97611433, 0.21725744, -1.044075e-09, -0.21725744, 0.97611433, 0.5006739, -0.3533032, -0.6056938)
-mesh = SubResource("BoxMesh_xdlid")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/Camera3D/MeshInstance3D" unique_id=391468338]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.220446e-16, 0.16210997, 0.05454955)
-mesh = SubResource("QuadMesh_lw4vb")
-surface_material_override/0 = SubResource("StandardMaterial3D_s58qb")
-
-[node name="HUD" type="Control" parent="CharacterBody3D" unique_id=1530876996 node_paths=PackedStringArray("visao", "container_magico", "botao_abrir_camera", "posicao_da_camera")]
+[node name="HUD" type="Control" parent="CharacterBody3D" unique_id=1530876996 node_paths=PackedStringArray("visao", "container_magico", "botao_abrir_camera", "posicao_da_camera", "inventario")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -334,9 +365,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_o251w")
 visao = NodePath("ObjetoEmFoco")
-container_magico = NodePath("../../Props/Transportador/machine_desiccator/Pivot/machine_desiccator_lid/StaticBody3D")
+container_magico = NodePath("../../Props/Transportador/machine_desiccator/ObjetoMagico")
 botao_abrir_camera = NodePath("AbrirCamera")
 posicao_da_camera = NodePath("PosicaoDaCamera")
+inventario = NodePath("Panel/Inventario")
 
 [node name="ObjetoEmFoco" type="Label" parent="CharacterBody3D/HUD" unique_id=1451831403]
 layout_mode = 1
@@ -386,21 +418,57 @@ Camera"
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="CharacterBody3D/HUD" unique_id=447675223]
 position = Vector2(15, 449)
-scale = Vector2(2.109375, 1)
+scale = Vector2(1.1562499, 0.890625)
 texture_normal = ExtResource("5_xdlid")
 action = "frente"
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="CharacterBody3D/HUD" unique_id=1590188490]
-position = Vector2(16, 582)
-scale = Vector2(2.125, 1)
+position = Vector2(16, 588)
+scale = Vector2(1.171875, 0.953125)
 texture_normal = ExtResource("5_xdlid")
 action = "tras"
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="CharacterBody3D/HUD" unique_id=471059765]
-position = Vector2(296, 580)
-scale = Vector2(2.125, 1)
+position = Vector2(186, 586)
+scale = Vector2(1.2343751, 0.953125)
 texture_normal = ExtResource("5_xdlid")
 action = "acao"
+
+[node name="Panel" type="PanelContainer" parent="CharacterBody3D/HUD" unique_id=1819328912]
+custom_minimum_size = Vector2(470, 176)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -235.0
+offset_top = -189.0
+offset_right = 235.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lw4vb")
+
+[node name="Inventario" type="HBoxContainer" parent="CharacterBody3D/HUD/Panel" unique_id=1165575854]
+layout_mode = 2
+theme_override_constants/separation = 19
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="CharacterBody3D/HUD/Panel/Inventario" unique_id=495660149]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("5_xdlid")
+
+[node name="TextureButton2" type="TextureButton" parent="CharacterBody3D/HUD/Panel/Inventario" unique_id=1756391503]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("5_xdlid")
+
+[node name="TextureButton3" type="TextureButton" parent="CharacterBody3D/HUD/Panel/Inventario" unique_id=1724168670]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("5_xdlid")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1915564099]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5552044, 2.5816603, 2.4166503)
@@ -423,7 +491,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0021078587, 0.12740588, 0.3
 mesh = SubResource("ArrayMesh_qnlhf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Props/Transportador/machine_desiccator/Pivot/machine_desiccator_lid" unique_id=1229572889 node_paths=PackedStringArray("acao")]
-script = ExtResource("7_xdlid")
+script = ExtResource("5_jud04")
 nome = "Tampa do Container"
 acao = NodePath("Abrir")
 
@@ -451,12 +519,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049471777, 0)
 visible = false
 mesh = SubResource("ArrayMesh_1c6h1")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Props/Transportador/machine_desiccator" unique_id=1061736827]
-script = ExtResource("5_jud04")
+[node name="ObjetoMagico" type="StaticBody3D" parent="Props/Transportador/machine_desiccator" unique_id=1061736827 node_paths=PackedStringArray("posicao_de_criacao")]
+script = ExtResource("7_xdlid")
+posicao_de_criacao = NodePath("Marker3D")
 nome = "Teletransporte"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Transportador/machine_desiccator/StaticBody3D" unique_id=1796537028]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Transportador/machine_desiccator/ObjetoMagico" unique_id=1796537028]
 shape = SubResource("ConcavePolygonShape3D_o251w")
+
+[node name="Marker3D" type="Marker3D" parent="Props/Transportador/machine_desiccator/ObjetoMagico" unique_id=917720819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06897652, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Props/Transportador" unique_id=1101080678]
 libraries/ = SubResource("AnimationLibrary_8xsak")
@@ -480,16 +552,16 @@ scale_amount_curve = SubResource("Curve_lw4vb")
 [node name="Low Poly - Lab Assets" parent="Props" unique_id=1816340316 instance=ExtResource("8_8nykp")]
 transform = Transform3D(-4.3711387e-10, 0, 0.01, 0, 0.01, 0, -0.01, 0, -4.3711387e-10, 3.0076258, 1.406735, 2.7150297)
 
-[node name="counter_counter_sink_001" parent="Props/Low Poly - Lab Assets" index="0" unique_id=1462112847]
+[node name="counter_counter_sink_001" parent="Props/Low Poly - Lab Assets" index="0" unique_id=340263234]
 surface_material_override/0 = ExtResource("9_m2r6f")
 
-[node name="counter_counter_sink_faucet_001" parent="Props/Low Poly - Lab Assets/counter_counter_sink_001" index="2" unique_id=1198276229]
+[node name="counter_counter_sink_faucet_001" parent="Props/Low Poly - Lab Assets/counter_counter_sink_001" index="2" unique_id=1992381880]
 surface_material_override/0 = ExtResource("9_m2r6f")
 
-[node name="counter_counter_sink_faucet_eye_wash_001" parent="Props/Low Poly - Lab Assets/counter_counter_sink_001/counter_counter_sink_faucet_001" index="0" unique_id=139667360]
+[node name="counter_counter_sink_faucet_eye_wash_001" parent="Props/Low Poly - Lab Assets/counter_counter_sink_001/counter_counter_sink_faucet_001" index="0" unique_id=1077279676]
 surface_material_override/0 = ExtResource("9_m2r6f")
 
-[node name="counter_counter_sink_faucet_knob_001" parent="Props/Low Poly - Lab Assets/counter_counter_sink_001" index="3" unique_id=608571703]
+[node name="counter_counter_sink_faucet_knob_001" parent="Props/Low Poly - Lab Assets/counter_counter_sink_001" index="3" unique_id=1526559416]
 surface_material_override/0 = ExtResource("9_m2r6f")
 
 [node name="Objeto" type="StaticBody3D" parent="Props/Low Poly - Lab Assets" unique_id=826511760]
@@ -498,7 +570,28 @@ transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, 0, 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Low Poly - Lab Assets/Objeto" unique_id=660303465]
 shape = SubResource("BoxShape3D_sgjni")
 
+[node name="Lixeira" type="StaticBody3D" parent="Props" unique_id=778378100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15631163, 1.5627012, 0.17346752)
+script = ExtResource("12_83n83")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Lixeira" unique_id=1858282448]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -0.13557675, -0.16711748, -0.21540363)
+shape = SubResource("BoxShape3D_83n83")
+
+[node name="Lixeira" parent="Props/Lixeira" unique_id=39071121 instance=ExtResource("13_s58qb")]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, -0.13189465, -0.46219587, -0.15668291)
+
 [node name="Low Poly - Lab Assets" parent="." unique_id=1628769951 instance=ExtResource("5_oxow8")]
 transform = Transform3D(-4.3711387e-10, 0, 0.01, 0, 0.01, 0, -0.01, 0, -4.3711387e-10, 3.0431604, 1.3667917, 1.0556082)
+
+[node name="CharacterBody3D2" type="CharacterBody3D" parent="." unique_id=368699941]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.147393, 0, 1.977854)
+
+[node name="blockbench_export" parent="CharacterBody3D2" unique_id=1675161000 instance=ExtResource("13_lw4vb")]
+transform = Transform3D(0.2397204, 0, 0.08694324, 0, 0.255, 0, -0.08694324, 0, 0.2397204, 0, 2.1668537, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody3D2" unique_id=1517648095]
+libraries/ = SubResource("AnimationLibrary_s58qb")
+autoplay = &"floating"
 
 [editable path="Props/Low Poly - Lab Assets"]
